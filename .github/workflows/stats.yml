@@ -36,7 +36,7 @@ jobs:
           fi
 
       - name: Generate dark-mode horizontal bars
-        uses: StefVuck/Github-Language-Stats@08368bb1df4ce92f547824b12af13a8aa526cb77 # v1.2.0
+        uses: Henreh1/Github-Language-Stats@main # custom to include orgs
         with:
           github_token: ${{ secrets.STATS_TOKEN }}
           visualization_types: "horizontal-bar"
@@ -44,6 +44,6 @@ jobs:
           exclude_languages: "HTML,CSS"
           include_forks: "false"
           top_repos_count: "5"
-          use_loc: "false"
+          use_loc: "true"
           dark_mode: "true"
           commit_message: "chore: update language statistics [skip ci]"
