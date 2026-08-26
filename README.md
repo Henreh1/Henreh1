@@ -15,6 +15,6 @@ Mostly Unity and Unreal Engine. I've also dabbled in Disrupt and, horrifically, 
 ## Language analytics mainly to see how my brain is melting
 
 <!-- Generated automatically by .github/workflows/stats.yml. -->
-![Henreh's programming-language usage across GitHub repositories](stats/horizontal_bar_by_lines.png)
+![Henreh's programming-language usage](stats/horizontal_bar_by_bytes.png)
 
 <sub>Updated automatically every 0:00 UTC by [GitHub Profile Language Analytics](https://github.com/marketplace/actions/github-profile-language-analytics).</sub>
