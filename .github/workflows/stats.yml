@@ -44,6 +44,6 @@ jobs:
           exclude_languages: "HTML,CSS"
           include_forks: "false"
           top_repos_count: "5"
-          use_loc: "true"
+          use_loc: "false"
           dark_mode: "true"
           commit_message: "chore: update language statistics [skip ci]"
