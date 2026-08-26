@@ -1,0 +1,49 @@
+name: Update language statistics
+
+on:
+  schedule:
+   - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: language-statistics
+  cancel-in-progress: false
+
+jobs:
+  update-stats:
+    name: Generate language charts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Check analytics token
+        env:
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: |
+          if [ -z "$STATS_TOKEN" ]; then
+            echo "::error::Add a repository secret named STATS_TOKEN before running this workflow."
+            exit 1
+          fi
+
+      - name: Generate dark-mode horizontal bars
+        uses: StefVuck/Github-Language-Stats@08368bb1df4ce92f547824b12af13a8aa526cb77 # v1.2.0
+        with:
+          github_token: ${{ secrets.STATS_TOKEN }}
+          visualization_types: "horizontal-bar"
+          output_path: "stats"
+          exclude_languages: "HTML,CSS"
+          include_forks: "false"
+          top_repos_count: "5"
+          use_loc: "true"
+          dark_mode: "true"
+          commit_message: "chore: update language statistics [skip ci]"
