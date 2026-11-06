@@ -17,4 +17,16 @@ Mostly Unity and Unreal Engine. I've also dabbled in Disrupt and, horrifically, 
 <!-- Generated automatically by .github/workflows/stats.yml. -->
 ![Language statistics](stats/horizontal_bar_by_lines.png)
 
+
+
+<a href="https://brainmade.org/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://brainmade.org/white-logo.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://brainmade.org/black-logo.svg">
+  <img alt="brainmade" src="https://brainmade.org/white-logo.svg">
+</picture>
+</a>
+
+
+
 <sub>Updated automatically every 0:00 UTC by [GitHub Profile Language Analytics](https://github.com/marketplace/actions/github-profile-language-analytics).</sub>
